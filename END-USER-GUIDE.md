@@ -68,30 +68,34 @@
 
 ### Logging In
 
-Open the platform URL provided by your administrator. You'll see the login screen.
+Open the platform URL provided by your administrator. You'll see the login screen — a dark, split-panel layout with your company branding on the left and the sign-in form on the right.
 
 ```
-┌─────────────────────────────────────────┐
-│                                         │
-│           Welcome back                  │
-│     Sign in to your account             │
-│                                         │
-│     Email  ┌───────────────────────┐    │
-│            │ you@company.com       │    │
-│            └───────────────────────┘    │
-│                                         │
-│     Password ┌─────────────────────┐    │
-│              │ ••••••••            │    │
-│              └─────────────────────┘    │
-│                                         │
-│         [ Sign In ]                     │
-│                                         │
-│     Forgot your password?               │
-│                                         │
-└─────────────────────────────────────────┘
+┌────────────────────────────┬────────────────────────────┐
+│                            │                            │
+│   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■    │                            │
+│                            │     Welcome back           │
+│   Your Company             │     Sign in to your        │
+│                            │     account                │
+│   "Your own email          │                            │
+│    marketing platform"     │     Email                  │
+│                            │     ┌──────────────────┐   │
+│   ● ● ●                   │     │ you@company.com  │   │
+│                            │     └──────────────────┘   │
+│                            │                            │
+│      ~ purple gradient ~   │     Password               │
+│      ~ glow effects ~      │     ┌──────────────────┐   │
+│                            │     │ ••••••••         │   │
+│                            │     └──────────────────┘   │
+│                            │                            │
+│                            │     [ Sign In ]            │
+│                            │                            │
+│                            │     Forgot your password?  │
+│                            │                            │
+└────────────────────────────┴────────────────────────────┘
 ```
 
-Enter your email and password, then click **Sign In**. If you've forgotten your password, click **Forgot your password?** to receive a reset link by email.
+The left panel features a dark background with ambient purple gradient glows — this is the signature Volley visual style. Enter your email and password on the right, then click **Sign In**. If you've forgotten your password, click **Forgot your password?** to receive a reset link by email.
 
 ### Accepting an Invitation
 
@@ -143,19 +147,20 @@ After logging in, you land on the **Dashboard** — your home base. It greets yo
 
 ### Navigating the Platform
 
-The left sidebar is your main navigation. Every section of the platform is one click away.
+The platform uses a **dark theme with purple accents** — a sleek, modern interface with subtle gradient glows. The left sidebar is your main navigation, with an active indicator bar and dot showing which section you're in.
 
 ```
 ┌──────────────────────┐
 │  🏢 Your Company     │
+│  ─── gradient line ──│
 │                      │
-│  ▸ Dashboard         │
-│  ▸ Campaigns         │
-│  ▸ Contacts          │
-│  ▸ Templates         │
-│  ▸ Analytics         │
-│  ▸ Suppression       │
-│  ▸ Settings          │
+│  ┃ ▸ Dashboard     • │  ← active indicator
+│    ▸ Campaigns       │
+│    ▸ Contacts        │
+│    ▸ Templates       │
+│    ▸ Analytics       │
+│    ▸ Suppression     │
+│    ▸ Settings        │
 │                      │
 │  ───────────────     │
 │  👤 Jane Smith       │
@@ -168,7 +173,7 @@ The left sidebar is your main navigation. Every section of the platform is one c
 
 | Section | What You'll Find |
 |---------|------------------|
-| **Dashboard** | Quick stats and recent activity |
+| **Dashboard** | Welcome greeting, stats cards, quick actions, recent campaigns |
 | **Campaigns** | Create, schedule, send, and monitor email campaigns |
 | **Contacts** | Your recipient database — add, import, search, and organize |
 | **Templates** | Email designs you can reuse across campaigns |
@@ -176,7 +181,9 @@ The left sidebar is your main navigation. Every section of the platform is one c
 | **Suppression** | Email addresses that won't receive future campaigns |
 | **Settings** | Team management, domain setup, and CRM connections *(Admin only)* |
 
-Your name and role appear at the bottom of the sidebar. The company logo and name at the top are customized for your organization.
+Your name and role badge appear at the bottom of the sidebar. Role badges are color-coded — purple for Admin, blue for Editor, gray for Viewer. The company logo and name at the top are customized for your organization.
+
+The top navigation bar includes **breadcrumb navigation** showing your current location (e.g., "Campaigns > March Newsletter") and a **theme toggle** to switch between light, dark, and system modes.
 
 ---
 

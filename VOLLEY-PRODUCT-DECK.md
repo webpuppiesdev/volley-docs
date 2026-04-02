@@ -739,28 +739,37 @@ Click **Sync Now** anytime to pull the latest contacts from your CRM.
 
 ### White-Label Branding — Make It Yours
 
-The entire platform is branded as your own. Your team sees your company name, your logo, and your colors — no trace of "Volley" anywhere.
+The entire platform is branded as your own. Your team sees your company name, your logo, and your colors — no trace of "Volley" anywhere. The UI features a **modern dark aesthetic with purple gradient accents** — ambient glow effects on the login screen and sidebar create a premium, polished feel.
 
 ```
 ┌──────────────────────────┐     ┌──────────────────────────┐
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│     │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│
 │  🏢 ACME CORP            │     │  🌊 BLUE OCEAN AGENCY    │
-│  [acme logo]             │     │  [blue ocean logo]       │
+│  ── gradient accent ──   │     │  ── gradient accent ──   │
 │                          │     │                          │
-│  ▸ Dashboard             │     │  ▸ Dashboard             │
-│  ▸ Campaigns             │     │  ▸ Campaigns             │
-│  ▸ Contacts              │     │  ▸ Contacts              │
+│  ┃ ▸ Dashboard         • │     │  ┃ ▸ Dashboard         • │
+│    ▸ Campaigns           │     │    ▸ Campaigns           │
+│    ▸ Contacts            │     │    ▸ Contacts            │
 │                          │     │                          │
-│  Primary color: 🟠       │     │  Primary color: 🔵       │
-│  Buttons, links, accents │     │  Buttons, links, accents │
-│  all use #FF6B35         │     │  all use #2563EB         │
+│  Primary: 🟠 #FF6B35     │     │  Primary: 🔵 #2563EB     │
+│  ~ purple/orange glow ~  │     │  ~ purple/blue glow ~    │
 │                          │     │                          │
 │  Emails from:            │     │  Emails from:            │
 │  hi@acmecorp.com         │     │  news@blueocean.agency   │
-│                          │     │                          │
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│     │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│
 └──────────────────────────┘     └──────────────────────────┘
 
 Same platform, completely different brands.
 ```
+
+**Visual design features:**
+- Dark theme with ambient purple gradient glows on login and sidebar
+- Split-panel login with branding panel + sign-in form
+- Active sidebar items highlighted with left accent bar and dot indicator
+- Color-coded role badges (purple for Admin, blue for Editor, gray for Viewer)
+- Stats cards with colored left borders (purple, blue, emerald, amber)
+- Light/dark/system theme toggle in the top navigation
+- Breadcrumb navigation in the header
 
 **What you can customize:**
 
@@ -768,8 +777,9 @@ Same platform, completely different brands.
 |---------|-----------------|
 | **Company name** | Sidebar header, browser tab, transactional emails |
 | **Logo** | Sidebar header (replaces text name) |
-| **Brand color** | Buttons, links, active states, accents throughout the UI |
+| **Brand color** | Buttons, links, active states, gradient accents throughout the UI |
 | **Sending domain** | The "from" address on all campaign emails |
+| **Theme** | Light, dark, or system-matching mode (user-selectable) |
 | **Transactional branding** | Password reset, invite, and verification emails match your brand too |
 
 No "Powered by" footer. No third-party branding. Your team — and your clients — see only your brand.
