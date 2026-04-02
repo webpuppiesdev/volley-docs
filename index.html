@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Volley — Documentation</title>
   <meta name="description" content="Volley email marketing platform documentation" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏐</text></svg>" />
+  <link rel="icon" href="https://webpuppies.com.sg/wp-content/uploads/2020/02/Full-Logo.svg" type="image/svg+xml" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,9 +16,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" />
 
   <style>
-    /* ═══════════════════════════════════════════
-       DESIGN SYSTEM
-       ═══════════════════════════════════════════ */
     :root {
       /* Brand */
       --brand-primary: #6366F1;
@@ -40,25 +37,17 @@
       --gray-800: #1F2937;
       --gray-900: #111827;
 
-      /* Accents */
-      --green: #10B981;
-      --blue: #3B82F6;
-      --amber: #F59E0B;
-      --red: #EF4444;
-
-      /* Docsify theme overrides */
+      /* Docsify overrides */
       --theme-color: var(--brand-primary);
       --base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --base-font-size: 15px;
       --base-line-height: 1.75;
       --base-color: var(--gray-700);
       --base-background-color: #FFFFFF;
-
       --code-font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
       --code-font-size: 13px;
       --code-inline-color: var(--brand-primary-dark);
       --code-inline-background: var(--brand-primary-bg);
-
       --sidebar-width: 280px;
       --sidebar-background: var(--gray-50);
       --sidebar-border-color: var(--gray-200);
@@ -69,26 +58,15 @@
       --sidebar-name-color: var(--gray-900);
       --sidebar-name-font-weight: 800;
       --sidebar-nav-strong-color: var(--gray-400);
-
-      --cover-background-color: var(--brand-primary);
-      --cover-heading-color: #fff;
-
       --heading-color: var(--gray-900);
       --heading-font-weight: 700;
-
       --blockquote-border-color: var(--brand-primary);
       --blockquote-background: var(--brand-primary-bg);
       --blockquote-color: var(--brand-primary-dark);
-
-      --notice-tip-border-color: var(--brand-primary);
-
       --search-input-border-color: var(--gray-200);
       --search-input-background-color: #fff;
     }
 
-    /* ═══════════════════════════════════════════
-       GLOBAL
-       ═══════════════════════════════════════════ */
     * {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -107,11 +85,18 @@
       padding-top: 0 !important;
     }
 
+    /* Logo in sidebar */
     .sidebar .app-name-link {
-      font-size: 1.1em !important;
-      letter-spacing: -0.02em;
-      padding: 24px 20px 16px !important;
-      display: block;
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px;
+      padding: 20px 20px 16px !important;
+      text-decoration: none !important;
+    }
+
+    .sidebar .app-name-link img {
+      height: 28px;
+      width: auto;
     }
 
     .sidebar .search {
@@ -169,7 +154,6 @@
       padding: 40px 48px 80px !important;
     }
 
-    /* Headings */
     .markdown-section h1 {
       font-size: 2em;
       font-weight: 800;
@@ -197,7 +181,6 @@
       margin-top: 2em;
     }
 
-    /* Blockquotes — used as callouts */
     .markdown-section blockquote {
       background: var(--brand-gradient-subtle);
       border-left: 4px solid var(--brand-primary);
@@ -212,7 +195,6 @@
       margin: 0;
     }
 
-    /* Links */
     .markdown-section a {
       color: var(--brand-primary);
       text-decoration: none;
@@ -299,7 +281,6 @@
       font-size: 13px;
     }
 
-    /* Copy code button */
     .docsify-copy-code-button {
       border-radius: 6px !important;
       font-size: 12px !important;
@@ -340,9 +321,6 @@
       color: var(--gray-800);
     }
 
-    /* ═══════════════════════════════════════════
-       HORIZONTAL RULE
-       ═══════════════════════════════════════════ */
     .markdown-section hr {
       border: none;
       border-top: 1px solid var(--gray-200);
@@ -360,6 +338,14 @@
     section.cover .cover-main {
       max-width: 640px;
       text-align: center;
+    }
+
+    /* Cover logo */
+    section.cover .cover-main > p:first-child img {
+      height: 48px;
+      width: auto;
+      margin-bottom: 16px;
+      filter: brightness(0) invert(1);
     }
 
     section.cover h1 {
@@ -418,7 +404,6 @@
       background: rgba(255, 255, 255, 0.25);
     }
 
-    /* Cover decorative elements */
     section.cover::after {
       content: '';
       position: absolute;
@@ -444,7 +429,7 @@
     }
 
     /* ═══════════════════════════════════════════
-       HOMEPAGE CARDS (custom .doc-card class)
+       HOMEPAGE CARDS
        ═══════════════════════════════════════════ */
     .doc-cards {
       display: grid;
@@ -559,104 +544,6 @@
         font-size: 2.2em !important;
       }
     }
-
-    /* ═══════════════════════════════════════════
-       DARK MODE
-       ═══════════════════════════════════════════ */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --base-background-color: #0F172A;
-        --base-color: #CBD5E1;
-        --heading-color: #F1F5F9;
-        --sidebar-background: #1E293B;
-        --sidebar-border-color: #334155;
-        --sidebar-nav-link-color: #94A3B8;
-        --sidebar-name-color: #F1F5F9;
-        --gray-50: #1E293B;
-        --gray-100: #334155;
-        --gray-200: #475569;
-        --brand-primary-bg: rgba(99, 102, 241, 0.1);
-        --blockquote-background: rgba(99, 102, 241, 0.08);
-        --blockquote-color: #A5B4FC;
-        --code-inline-background: rgba(99, 102, 241, 0.15);
-        --code-inline-color: #A5B4FC;
-        --search-input-background-color: #1E293B;
-      }
-
-      body {
-        background: #0F172A;
-      }
-
-      .sidebar {
-        background: #1E293B !important;
-        border-color: #334155 !important;
-      }
-
-      .sidebar .search input {
-        background: #0F172A !important;
-        border-color: #334155 !important;
-        color: #CBD5E1 !important;
-      }
-
-      .markdown-section pre {
-        background: #020617 !important;
-        border-color: #1E293B !important;
-      }
-
-      .markdown-section table {
-        border-color: #334155;
-      }
-
-      .markdown-section th {
-        background: #1E293B;
-        color: #94A3B8;
-        border-color: #334155;
-      }
-
-      .markdown-section td {
-        color: #CBD5E1;
-        border-color: #1E293B;
-      }
-
-      .markdown-section tr:hover td {
-        background: rgba(99, 102, 241, 0.04);
-      }
-
-      .mermaid {
-        background: #1E293B;
-        border-color: #334155;
-      }
-
-      .doc-card {
-        background: #1E293B;
-        border-color: #334155;
-      }
-
-      .doc-card:hover {
-        border-color: var(--brand-primary);
-        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
-      }
-
-      .doc-card .card-title {
-        color: #F1F5F9;
-      }
-
-      .doc-card .card-desc {
-        color: #94A3B8;
-      }
-
-      .docsify-copy-code-button {
-        background: #334155 !important;
-      }
-
-      .docsify-pagination-container {
-        border-color: #334155 !important;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #475569;
-      }
-    }
   </style>
 </head>
 <body>
@@ -664,7 +551,7 @@
 
   <script>
     window.$docsify = {
-      name: '<span style="background:var(--brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Volley</span>',
+      name: '<img src="https://webpuppies.com.sg/wp-content/uploads/2020/02/Full-Logo.svg" alt="Webpuppies" style="height:26px;width:auto;" /> <span style="color:var(--gray-300);font-weight:300;margin:0 6px;">|</span> <span style="font-weight:700;color:var(--gray-800);font-size:0.95em;">Volley</span>',
       nameLink: '/',
       repo: false,
       loadSidebar: true,
@@ -705,25 +592,12 @@
   <!-- Mermaid -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
   <script>
-    // Detect dark mode for mermaid theme
-    var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
     mermaid.initialize({
       startOnLoad: false,
-      theme: isDark ? 'dark' : 'default',
+      theme: 'default',
       securityLevel: 'loose',
       fontFamily: 'Inter, sans-serif',
-      themeVariables: isDark ? {
-        primaryColor: '#4F46E5',
-        primaryTextColor: '#F1F5F9',
-        primaryBorderColor: '#6366F1',
-        lineColor: '#475569',
-        secondaryColor: '#1E293B',
-        tertiaryColor: '#334155',
-        background: '#1E293B',
-        mainBkg: '#1E293B',
-        nodeBorder: '#475569',
-      } : {
+      themeVariables: {
         primaryColor: '#EEF2FF',
         primaryTextColor: '#1F2937',
         primaryBorderColor: '#6366F1',
