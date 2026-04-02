@@ -1,13 +1,13 @@
-- [Home](/)
+- [Home](#welcome-to-volley)
 
 - **Overview**
-  - [Product Overview](VOLLEY-PRODUCT-DECK.md)
+  - [Product Overview](#volley-—-product-overview)
 
 - **Guides**
-  - [End User Guide](END-USER-GUIDE.md)
-  - [User Manual](user-manual.md)
-  - [Setup Guide](setup-guide.md)
+  - [End User Guide](#volley-—-end-user-guide)
+  - [User Manual](#volley-user-manual)
+  - [Setup Guide](#volley-setup-guide)
 
 - **Reference**
-  - [Platform Architecture](VOLLEY-PLATFORM-OVERVIEW.md)
-  - [API Reference](api-reference.md)
+  - [Platform Architecture](#volley-—-full-application-overview)
+  - [API Reference](#volley-api-reference)
