@@ -104,24 +104,42 @@ If an admin has invited you to the platform:
 
 ### Your Dashboard
 
-After logging in, you land on the **Dashboard** — your home base. It shows four key numbers at a glance:
+After logging in, you land on the **Dashboard** — your home base. It greets you by name and shows everything you need at a glance.
 
 ```
-┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-│ Total        │  │ Campaigns    │  │ Avg Open     │  │ Recent       │
-│ Contacts     │  │ Sent         │  │ Rate         │  │ Activity     │
-│              │  │              │  │              │  │              │
-│    2,847     │  │      23      │  │   34.2%      │  │  Campaign    │
-│              │  │              │  │              │  │  sent 2h ago │
-└──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│  Welcome back, Jane!                                                     │
+│  Here's how your email marketing is performing.                          │
+│                                                                          │
+│  STATS                                                                   │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐│
+│  │ Campaigns    │  │ Emails       │  │ Avg Open     │  │ Avg Delivery ││
+│  │              │  │ Sent         │  │ Rate         │  │ Rate         ││
+│  │      23      │  │   12,450     │  │   34.2%      │  │   98.7%      ││
+│  └──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘│
+│                                                                          │
+│  QUICK ACTIONS                                                           │
+│  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐      │
+│  │  📧 New Campaign  │  │  📥 Import        │  │  🎨 Create       │      │
+│  │                   │  │     Contacts      │  │     Template     │      │
+│  └──────────────────┘  └──────────────────┘  └──────────────────┘      │
+│                                                                          │
+│  RECENT CAMPAIGNS                                                        │
+│  ┌───────────────────────────────────────────────────────────────────┐  │
+│  │  Name               Status       Sent     Open Rate              │  │
+│  │  March Newsletter    Completed    2,847    34.2%                  │  │
+│  │  Spring Sale         Scheduled    —        —                      │  │
+│  │  Welcome Series      Completed    342      52.1%                  │  │
+│  └───────────────────────────────────────────────────────────────────┘  │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
-| Card | What It Tells You |
-|------|-------------------|
-| **Total Contacts** | How many contacts are in your database right now |
-| **Campaigns Sent** | How many campaigns you've sent to date |
-| **Avg Open Rate** | The average percentage of recipients who opened your emails |
-| **Recent Activity** | The most recent action on the platform |
+| Section | What It Shows |
+|---------|---------------|
+| **Stats cards** | Campaigns sent, total emails delivered, average open rate, average delivery rate |
+| **Quick actions** | One-click shortcuts to create a campaign, import contacts, or build a template |
+| **Recent campaigns** | Your latest campaigns with their status, send count, and open rate |
 
 ### Navigating the Platform
 
@@ -735,18 +753,25 @@ Open any completed campaign to see its performance:
 
 ### Global Analytics Dashboard
 
-Go to **Analytics** to see performance across all campaigns. Use the time range filter to narrow by period:
+Go to **Analytics** to see performance across all campaigns. Use the pill-style filter buttons at the top to switch time periods:
+
+```
+  [ 7d ]  [ 30d ]  [ 90d ]  [ All time ]
+```
 
 | Filter | What It Shows |
 |--------|--------------|
-| Last 7 days | Recent campaign performance |
-| Last 30 days | Monthly trend |
-| Last 90 days | Quarterly overview |
-| All time | Complete history |
+| **7d** | Last 7 days — recent campaign performance |
+| **30d** | Last 30 days — monthly trend |
+| **90d** | Last 90 days — quarterly overview |
+| **All time** | Complete history |
 
-The global dashboard shows:
-- **Total sent, delivered, opened, clicked, bounced** across all campaigns
-- **Bar chart** comparing individual campaign performance side by side
+The dashboard shows five stats cards with colored left borders, plus a bar chart comparing campaign performance:
+- **Total Sent** — total emails across all campaigns
+- **Total Delivered** — with delivery rate percentage
+- **Total Opened** — with open rate percentage
+- **Total Clicked** — with click rate percentage
+- **Total Bounced** — with bounce rate percentage
 
 ### Understanding Your Metrics
 

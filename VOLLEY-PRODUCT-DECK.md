@@ -105,31 +105,40 @@ graph TD
 
 ### Dashboard — Your Command Center
 
-The first thing your team sees after logging in. Four cards show the numbers that matter most — at a glance, no digging.
+The first thing your team sees after logging in. A personalized welcome, key stats, quick actions, and recent campaign activity — all on one page.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│  📊 Dashboard                                                            │
-│  Overview of your email marketing platform.                              │
+│  Welcome back, Jane!                                                     │
+│  Here's how your email marketing is performing.                          │
 │                                                                          │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐│
-│  │ Total        │  │ Campaigns    │  │ Avg Open     │  │ Recent       ││
-│  │ Contacts     │  │ Sent         │  │ Rate         │  │ Activity     ││
-│  │              │  │              │  │              │  │              ││
-│  │    2,847     │  │      23      │  │   34.2%      │  │  Newsletter  ││
-│  │              │  │              │  │              │  │  sent 2h ago ││
+│  │ Campaigns    │  │ Emails       │  │ Avg Open     │  │ Avg Delivery ││
+│  │              │  │ Sent         │  │ Rate         │  │ Rate         ││
+│  │      23      │  │   12,450     │  │   34.2%      │  │   98.7%      ││
 │  └──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘│
 │                                                                          │
-│  Your team can check the pulse of their email program in seconds.       │
+│  QUICK ACTIONS                                                           │
+│  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐      │
+│  │  📧 New Campaign  │  │  📥 Import        │  │  🎨 Create       │      │
+│  │                   │  │     Contacts      │  │     Template     │      │
+│  └──────────────────┘  └──────────────────┘  └──────────────────┘      │
+│                                                                          │
+│  RECENT CAMPAIGNS                                                        │
+│  ┌───────────────────────────────────────────────────────────────────┐  │
+│  │  Name               Status       Sent     Open Rate              │  │
+│  │  March Newsletter    Completed    2,847    34.2%                  │  │
+│  │  Spring Sale         Scheduled    —        —                      │  │
+│  │  Welcome Series      Completed    342      52.1%                  │  │
+│  └───────────────────────────────────────────────────────────────────┘  │
 │                                                                          │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-**What it shows:**
-- **Total Contacts** — how many people are in your database
-- **Campaigns Sent** — how many campaigns you've completed
-- **Avg Open Rate** — how engaged your audience is overall
-- **Recent Activity** — what happened last
+**Three sections:**
+- **Stats cards** — Campaigns sent, total emails delivered, average open rate, average delivery rate
+- **Quick actions** — One-click shortcuts to the most common tasks
+- **Recent campaigns** — Your latest campaigns with status, send count, and open rate
 
 ---
 
@@ -452,7 +461,7 @@ Aggregated metrics across all your campaigns, with time-range filters:
 │  📈 Analytics                                                            │
 │  Track email delivery and engagement across all campaigns.               │
 │                                                                          │
-│  Period: [ Last 7 days ▾ ]  [ Last 30 days ]  [ Last 90 days ]  [ All ]│
+│  [ 7d ]  [ 30d ]  [ 90d ]  [ All time ]                                 │
 │                                                                          │
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────┐│
 │  │ Total     │  │ Total     │  │ Total     │  │ Total     │  │ Total ││
