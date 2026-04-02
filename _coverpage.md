@@ -1,4 +1,4 @@
-![logo](https://media.licdn.com/dms/image/v2/D560BAQHpFxUy3PTYLw/company-logo_200_200/B56ZeMIOLeGQAI-/0/1750402663823/webpuppies_logo?e=2147483647&v=beta&t=4cHHzf-GbL9yPZIOxV02G1gk0zSrUAGV_ocfw8mQSqk)
+![logo](logo.svg ':size=80')
 
 # Volley
 
