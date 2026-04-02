@@ -43,8 +43,9 @@
     }
 
     * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    html { scroll-behavior: smooth; }
     body { background: #fff; }
+    /* Smooth scroll only on main content area, not html (breaks Docsify hash routing) */
+    .content, main { scroll-behavior: smooth; }
 
     /* ── SIDEBAR (light) ── */
     .sidebar { border-right: 1px solid var(--gray-100) !important; background: #fff !important; padding-top: 0 !important; }
@@ -86,7 +87,8 @@
       color: var(--brand) !important; background: var(--brand-50) !important;
       border-left-color: var(--brand-light) !important;
     }
-    .sidebar ul li.active > a {
+    .sidebar ul li.active > a,
+    .sidebar-nav a.spy-active {
       border-left: 2px solid var(--brand) !important;
       background: var(--brand-50) !important;
       color: var(--brand-dark) !important; font-weight: 600 !important;
@@ -98,8 +100,7 @@
     }
 
     /* ── CONTENT (light) ── */
-    .markdown-section { max-width: 840px !important; padding: 44px 52px 100px !important; scroll-behavior: smooth; }
-    main { scroll-behavior: smooth; }
+    .markdown-section { max-width: 840px !important; padding: 44px 52px 100px !important; }
     .markdown-section h1 {
       font-size: 2.1em; font-weight: 800; letter-spacing: -0.035em;
       color: var(--gray-950); padding-bottom: 16px; border-bottom: none; line-height: 1.2; margin-top: 0;
@@ -355,16 +356,61 @@
       },
     });
 
+    // Scroll-spy: highlight sidebar link matching the visible heading
+    var spyObserver = null;
+    function initScrollSpy() {
+      if (spyObserver) spyObserver.disconnect();
+      var headings = document.querySelectorAll('.markdown-section h1[id], .markdown-section h2[id], .markdown-section h3[id]');
+      if (!headings.length) return;
+
+      spyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.getAttribute('id');
+          if (!id) return;
+          // Remove active from all sidebar links
+          document.querySelectorAll('.sidebar-nav a').forEach(function (a) {
+            a.classList.remove('spy-active');
+            var li = a.closest('li');
+            if (li) li.classList.remove('active');
+          });
+          // Find and activate matching sidebar link
+          var hash = '#/' + window.location.hash.split('?')[0].split('#/')[1];
+          if (hash) hash = hash.split('?')[0];
+          document.querySelectorAll('.sidebar-nav a').forEach(function (a) {
+            var href = a.getAttribute('href') || '';
+            if (href.indexOf('#' + id) !== -1 || href.indexOf('/' + id) !== -1) {
+              a.classList.add('spy-active');
+              var li = a.closest('li');
+              if (li) li.classList.add('active');
+              // Scroll sidebar to show active item
+              a.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+          });
+        });
+      }, {
+        rootMargin: '-80px 0px -60% 0px',
+        threshold: 0
+      });
+
+      headings.forEach(function (h) { spyObserver.observe(h); });
+    }
+
     window.$docsify.plugins = [
       function (hook) {
         hook.doneEach(function () {
+          // Mermaid
           document.querySelectorAll('.mermaid').forEach(function (el) {
             el.removeAttribute('data-processed');
           });
           try { mermaid.run(); } catch (e) {}
+
+          // Init scroll spy after content renders
+          setTimeout(initScrollSpy, 200);
         });
 
         hook.ready(function () {
+          // Sidebar branding
           var branding = document.createElement('div');
           branding.className = 'sidebar-branding';
           branding.textContent = 'Powered by ';
@@ -382,7 +428,7 @@
           return html
             + '<div class="powered-by-footer">'
             + '<img src="' + WP_LOGO + '" alt="Webpuppies" />'
-            + 'Powered by <a href="https://webpuppies.com.sg" target="_blank" rel="noopener">Webpuppies</a> · <a href="https://aws.amazon.com" target="_blank" rel="noopener">AWS</a>'
+            + 'Powered by <a href="https://webpuppies.com.sg" target="_blank" rel="noopener">Webpuppies</a> \u00B7 <a href="https://aws.amazon.com" target="_blank" rel="noopener">AWS</a>'
             + '</div>';
         });
       },
