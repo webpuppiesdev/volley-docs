@@ -59,17 +59,13 @@
     }
     .sidebar .app-name-link img.sidebar-logo { height: 28px; width: 28px; }
     .sidebar-footer {
-      position: fixed; bottom: 0; left: 0; width: var(--sidebar-width);
-      padding: 14px 20px; border-top: 1px solid var(--gray-100);
-      background: #fff; display: flex; align-items: center; gap: 8px;
-      font-size: 11px; color: var(--gray-400); z-index: 99;
-      box-sizing: border-box;
+      padding: 14px 20px; margin-top: 20px;
+      border-top: 1px solid var(--gray-100);
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; color: var(--gray-400);
     }
     .sidebar-footer img { height: 18px; width: 18px; border-radius: 4px; opacity: 0.7; }
     .sidebar-footer span { color: var(--gray-500); font-weight: 500; }
-    /* Prevent sidebar content from going under footer */
-    .sidebar > .sidebar-nav { margin-bottom: 48px !important; }
-    .sidebar { overflow-y: auto !important; }
     .sidebar .search { padding: 12px 16px !important; }
     .sidebar .search input {
       border-radius: 10px !important; border: 1px solid var(--gray-200) !important;
@@ -82,7 +78,7 @@
       background: #fff !important; outline: none !important;
     }
     .sidebar .search input::placeholder { color: var(--gray-400) !important; }
-    .sidebar-nav { padding-bottom: 64px !important; }
+    .sidebar-nav { padding-bottom: 16px !important; }
     .sidebar ul li a {
       font-size: 13.5px !important; padding: 5px 20px !important;
       transition: all 0.12s; border-left: 2px solid transparent !important;
@@ -380,7 +376,9 @@
           brand.textContent = 'Webpuppies';
           footer.appendChild(brand);
           footer.appendChild(document.createTextNode(' · AWS'));
-          document.querySelector('.sidebar').appendChild(footer);
+          var nav = document.querySelector('.sidebar-nav');
+          if (nav) { nav.appendChild(footer); }
+          else { document.querySelector('.sidebar').appendChild(footer); }
         });
 
         hook.afterEach(function (html) {
