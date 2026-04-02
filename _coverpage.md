@@ -6,5 +6,5 @@
 
 Powered by [Webpuppies](https://webpuppies.com.sg) · Built on [AWS](https://aws.amazon.com)
 
-[Get Started](VOLLEY-PRODUCT-DECK.md)
+[Get Started](#welcome-to-volley)
 [View Architecture](VOLLEY-PLATFORM-OVERVIEW.md)
