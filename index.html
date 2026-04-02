@@ -361,10 +361,11 @@
           var img = document.createElement('img');
           img.src = WP_LOGO; img.alt = 'Webpuppies';
           footer.appendChild(img);
-          footer.appendChild(document.createTextNode('A product by '));
+          footer.appendChild(document.createTextNode('Powered by '));
           var brand = document.createElement('span');
           brand.textContent = 'Webpuppies';
           footer.appendChild(brand);
+          footer.appendChild(document.createTextNode(' · AWS'));
           document.querySelector('.sidebar').appendChild(footer);
         });
 
@@ -372,7 +373,7 @@
           return html
             + '<div class="powered-by-footer">'
             + '<img src="' + WP_LOGO + '" alt="Webpuppies" />'
-            + 'A product by <a href="https://webpuppies.com.sg" target="_blank" rel="noopener">Webpuppies</a>'
+            + 'Powered by <a href="https://webpuppies.com.sg" target="_blank" rel="noopener">Webpuppies</a> · <a href="https://aws.amazon.com" target="_blank" rel="noopener">AWS</a>'
             + '</div>';
         });
       },
