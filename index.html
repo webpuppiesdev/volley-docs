@@ -188,50 +188,56 @@
       pointer-events: none;
     }
     section.cover .cover-main {
-      max-width: 600px; text-align: center; position: relative; z-index: 1;
+      max-width: 720px; text-align: center; position: relative; z-index: 1;
     }
     section.cover .cover-main > p:first-child img {
-      height: 72px; width: 72px; margin-bottom: 24px;
-      filter: drop-shadow(0 4px 20px rgba(124, 58, 237, 0.4));
+      height: 96px; width: 96px; margin-bottom: 32px;
+      filter: drop-shadow(0 4px 24px rgba(124, 58, 237, 0.5));
     }
     section.cover h1 {
-      font-size: 4em !important; font-weight: 900 !important;
+      font-size: 5.5em !important; font-weight: 900 !important;
       letter-spacing: -0.05em; border: none !important;
-      margin-bottom: 0 !important; line-height: 1.1 !important;
+      margin-bottom: 0 !important; line-height: 1.05 !important;
       color: #fff !important;
     }
     section.cover blockquote {
       background: none !important; border: none !important;
-      color: rgba(255,255,255,0.6) !important;
-      font-size: 1.05em !important; padding: 0 !important;
-      max-width: 460px; margin: 16px auto 0; line-height: 1.6 !important;
+      color: rgba(255,255,255,0.5) !important;
+      font-size: 1.2em !important; padding: 0 !important;
+      max-width: 520px; margin: 20px auto 0; line-height: 1.7 !important;
     }
-    section.cover blockquote p { color: rgba(255,255,255,0.6) !important; }
-    /* "A product by Webpuppies" line */
+    section.cover blockquote p { color: rgba(255,255,255,0.5) !important; }
+    /* "Powered by" line */
     section.cover .cover-main > p:nth-child(2) {
-      font-size: 12px !important; color: rgba(255,255,255,0.35) !important;
-      margin-top: -4px !important; margin-bottom: 8px !important;
-      letter-spacing: 0.04em;
+      font-size: 13px !important; color: rgba(255,255,255,0.25) !important;
+      margin-top: 0 !important; margin-bottom: 12px !important;
+      letter-spacing: 0.03em;
+    }
+    section.cover .cover-main > p:nth-child(2) a {
+      color: rgba(255,255,255,0.35) !important; text-decoration: none !important;
+    }
+    section.cover .cover-main > p:nth-child(2) a:hover {
+      color: rgba(255,255,255,0.6) !important;
     }
     /* CTA buttons */
     section.cover .cover-main > p:last-child a {
-      display: inline-block; padding: 13px 36px; border-radius: 12px;
-      font-weight: 600; font-size: 15px; text-decoration: none !important;
-      transition: all 0.2s; margin: 5px;
+      display: inline-block; padding: 16px 44px; border-radius: 14px;
+      font-weight: 600; font-size: 16px; text-decoration: none !important;
+      transition: all 0.2s; margin: 6px;
     }
     section.cover .cover-main > p:last-child a:first-child {
       background: linear-gradient(135deg, #7C3AED, #A855F7);
-      color: #fff; box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+      color: #fff; box-shadow: 0 4px 24px rgba(124, 58, 237, 0.45);
     }
     section.cover .cover-main > p:last-child a:first-child:hover {
-      transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+      transform: translateY(-2px); box-shadow: 0 8px 36px rgba(124, 58, 237, 0.55);
     }
     section.cover .cover-main > p:last-child a:last-child {
       background: transparent; color: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.15);
     }
     section.cover .cover-main > p:last-child a:last-child:hover {
-      background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3);
       color: #fff;
     }
 
@@ -284,7 +290,8 @@
       .markdown-section h1 { font-size: 1.7em; }
       .markdown-section h2 { font-size: 1.3em; }
       .doc-cards { grid-template-columns: 1fr; }
-      section.cover h1 { font-size: 2.4em !important; }
+      section.cover h1 { font-size: 3em !important; }
+      section.cover .cover-main > p:first-child img { height: 72px; width: 72px; }
     }
   </style>
 </head>
