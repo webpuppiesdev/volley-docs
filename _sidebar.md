@@ -1,11 +1,13 @@
-- **Getting Started**
-  - [Product Overview](VOLLEY-PRODUCT-DECK.md)
-  - [Setup Guide](setup-guide.md)
+- [Home](/)
 
-- **For Your Team**
+- **Overview**
+  - [Product Overview](VOLLEY-PRODUCT-DECK.md)
+
+- **Guides**
   - [End User Guide](END-USER-GUIDE.md)
   - [User Manual](user-manual.md)
+  - [Setup Guide](setup-guide.md)
 
-- **Technical**
+- **Reference**
   - [Platform Architecture](VOLLEY-PLATFORM-OVERVIEW.md)
   - [API Reference](api-reference.md)
