@@ -1,6 +1,6 @@
 # Welcome to Volley
 
-> Your own email marketing platform — branded as yours, with unlimited contacts and complete data ownership.
+> Email marketing that delivers results. Build, send, and track email campaigns with a platform designed for speed and simplicity.
 
 ## Documentation
 

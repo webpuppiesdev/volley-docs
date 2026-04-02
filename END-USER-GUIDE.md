@@ -68,34 +68,46 @@
 
 ### Logging In
 
-Open the platform URL provided by your administrator. You'll see the login screen — a dark, split-panel layout with your company branding on the left and the sign-in form on the right.
+Open the platform URL provided by your administrator. You'll see the login screen — a split-panel design with a dark branding panel on the left and the sign-in form on the right.
 
 ```
-┌────────────────────────────┬────────────────────────────┐
-│                            │                            │
-│   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■    │                            │
-│                            │     Welcome back           │
-│   Your Company             │     Sign in to your        │
-│                            │     account                │
-│   "Your own email          │                            │
-│    marketing platform"     │     Email                  │
-│                            │     ┌──────────────────┐   │
-│   ● ● ●                   │     │ you@company.com  │   │
-│                            │     └──────────────────┘   │
-│                            │                            │
-│      ~ purple gradient ~   │     Password               │
-│      ~ glow effects ~      │     ┌──────────────────┐   │
-│                            │     │ ••••••••         │   │
-│                            │     └──────────────────┘   │
-│                            │                            │
-│                            │     [ Sign In ]            │
-│                            │                            │
-│                            │     Forgot your password?  │
-│                            │                            │
-└────────────────────────────┴────────────────────────────┘
+┌─────────────────────────────────┬─────────────────────────────────┐
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │                                 │
+│                                 │                                 │
+│  🟣 Volley                      │                                 │
+│                                 │                                 │
+│                                 │     ┌───────────────────────┐   │
+│                                 │     │     Sign In           │   │
+│  Email marketing                │     │                       │   │
+│  that delivers results.         │     │  Enter your           │   │
+│                                 │     │  credentials to       │   │
+│  Build, send, and track email   │     │  access the platform  │   │
+│  campaigns with a platform      │     │                       │   │
+│  designed for speed and         │     │  Email                │   │
+│  simplicity.                    │     │  ┌─────────────────┐  │   │
+│                                 │     │  │ you@example.com │  │   │
+│  📧 Powerful campaign builder   │     │  └─────────────────┘  │   │
+│  👥 Smart audience segmentation │     │                       │   │
+│  📊 Real-time delivery analytics│     │  Password             │   │
+│  ⚡ Automated email workflows   │     │  ┌─────────────────┐  │   │
+│                                 │     │  │ ••••••••        │  │   │
+│                                 │     │  └─────────────────┘  │   │
+│                                 │     │                       │   │
+│                                 │     │  [███ Sign In ███]    │   │
+│                                 │     │   purple gradient     │   │
+│                                 │     │                       │   │
+│                                 │     │  Forgot     Create    │   │
+│                                 │     │  password?  account   │   │
+│  Powered by ── webpuppies       │     └───────────────────────┘   │
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │                                 │
+└─────────────────────────────────┴─────────────────────────────────┘
 ```
 
-The left panel features a dark background with ambient purple gradient glows — this is the signature Volley visual style. Enter your email and password on the right, then click **Sign In**. If you've forgotten your password, click **Forgot your password?** to receive a reset link by email.
+**Left panel:** Dark background (near-black) with subtle purple gradient glow effects. Shows the Volley logo, tagline, platform description, and four feature highlights. "Powered by Webpuppies" appears at the bottom.
+
+**Right panel:** Light background with a white sign-in card. The **Sign In** button uses a vibrant purple gradient. Links to "Forgot password?" and "Create account" appear below.
+
+Enter your email and password, then click **Sign In**. If you've forgotten your password, click **Forgot password?** to receive a reset link by email.
 
 ### Accepting an Invitation
 

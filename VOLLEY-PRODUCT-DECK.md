@@ -32,9 +32,11 @@
 
 ## What Is Volley?
 
-Volley is a complete email marketing platform that you own and control. Your team uses it to manage contacts, design emails, send campaigns, and track results — just like Mailchimp or SendGrid, but running entirely on your own infrastructure with your own branding.
+**Email marketing that delivers results.**
 
-No "Powered by" logos. No vendor lock-in. No contact limits. Full data ownership.
+Volley is a complete email marketing platform that you own and control. Build, send, and track email campaigns with a platform designed for speed and simplicity — just like Mailchimp or SendGrid, but running entirely on your own infrastructure with your own branding.
+
+No vendor lock-in. No contact limits. Full data ownership.
 
 You deploy it once, brand it with your company name and colors, and your team has a professional email marketing tool that looks and feels like your own product.
 
@@ -762,27 +764,31 @@ The entire platform is branded as your own. Your team sees your company name, yo
 Same platform, completely different brands.
 ```
 
-**Visual design features:**
-- Dark theme with ambient purple gradient glows on login and sidebar
-- Split-panel login with branding panel + sign-in form
-- Active sidebar items highlighted with left accent bar and dot indicator
-- Color-coded role badges (purple for Admin, blue for Editor, gray for Viewer)
-- Stats cards with colored left borders (purple, blue, emerald, amber)
-- Light/dark/system theme toggle in the top navigation
-- Breadcrumb navigation in the header
+**Visual design:**
+
+The platform features a premium dark-to-light aesthetic with purple accent gradients:
+
+- **Login screen** — split-panel: dark branding panel (left) with tagline, feature bullets, and "Powered by" branding; light panel (right) with sign-in card and purple gradient button
+- **Sidebar** — dark background with subtle purple gradient glows, active item bar + dot indicator, gradient accent line under logo
+- **Color-coded role badges** — purple for Admin, blue for Editor, gray for Viewer
+- **Stats cards** — colored left borders (purple, blue, emerald, amber)
+- **Theme toggle** — light, dark, or system-matching mode
+- **Breadcrumb navigation** — shows current page location in the header
+- **Purple gradient buttons** — primary actions use a vibrant purple gradient
 
 **What you can customize:**
 
 | Element | Where It Appears |
 |---------|-----------------|
-| **Company name** | Sidebar header, browser tab, transactional emails |
-| **Logo** | Sidebar header (replaces text name) |
+| **Company name** | Login tagline, sidebar header, browser tab, transactional emails |
+| **Logo** | Login panel (top-left), sidebar header |
 | **Brand color** | Buttons, links, active states, gradient accents throughout the UI |
+| **Login copy** | Tagline, description, and feature bullets on the login panel |
 | **Sending domain** | The "from" address on all campaign emails |
 | **Theme** | Light, dark, or system-matching mode (user-selectable) |
 | **Transactional branding** | Password reset, invite, and verification emails match your brand too |
 
-No "Powered by" footer. No third-party branding. Your team — and your clients — see only your brand.
+The login page shows "Powered by Webpuppies" in the bottom-left corner. All other screens display your brand only — no third-party branding.
 
 ---
 

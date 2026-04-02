@@ -4,7 +4,7 @@
 
 A product by Webpuppies
 
-> Your own email marketing platform — white-labeled, self-hosted, with unlimited contacts and complete data ownership.
+> Email marketing that delivers results. Build, send, and track email campaigns with a platform designed for speed and simplicity.
 
 [Get Started](VOLLEY-PRODUCT-DECK.md)
 [View Architecture](VOLLEY-PLATFORM-OVERVIEW.md)
