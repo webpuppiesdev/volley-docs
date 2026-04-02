@@ -58,14 +58,15 @@
       background: linear-gradient(90deg, var(--brand), rgba(124,58,237,0.2), transparent);
     }
     .sidebar .app-name-link img.sidebar-logo { height: 28px; width: 28px; }
-    .sidebar-footer {
-      padding: 14px 20px; margin-top: 20px;
-      border-top: 1px solid var(--gray-100);
-      display: flex; align-items: center; gap: 8px;
+    .sidebar-branding {
+      padding: 2px 20px 12px;
       font-size: 11px; color: var(--gray-400);
+      display: flex; align-items: center; gap: 6px;
+      border-bottom: 1px solid var(--gray-100);
+      margin-bottom: 4px;
     }
-    .sidebar-footer img { height: 18px; width: 18px; border-radius: 4px; opacity: 0.7; }
-    .sidebar-footer span { color: var(--gray-500); font-weight: 500; }
+    .sidebar-branding img { height: 16px; width: 16px; border-radius: 3px; opacity: 0.6; }
+    .sidebar-branding span { color: var(--gray-500); font-weight: 500; }
     .sidebar .search { padding: 12px 16px !important; }
     .sidebar .search input {
       border-radius: 10px !important; border: 1px solid var(--gray-200) !important;
@@ -78,7 +79,7 @@
       background: #fff !important; outline: none !important;
     }
     .sidebar .search input::placeholder { color: var(--gray-400) !important; }
-    .sidebar-nav { padding-bottom: 16px !important; }
+    .sidebar-nav { padding-bottom: 20px !important; }
     .sidebar ul li a {
       font-size: 13.5px !important; padding: 5px 20px !important;
       transition: all 0.12s; border-left: 2px solid transparent !important;
@@ -366,19 +367,20 @@
         });
 
         hook.ready(function () {
-          var footer = document.createElement('div');
-          footer.className = 'sidebar-footer';
+          var branding = document.createElement('div');
+          branding.className = 'sidebar-branding';
           var img = document.createElement('img');
           img.src = WP_LOGO; img.alt = 'Webpuppies';
-          footer.appendChild(img);
-          footer.appendChild(document.createTextNode('Powered by '));
+          branding.appendChild(img);
+          branding.appendChild(document.createTextNode('Powered by '));
           var brand = document.createElement('span');
           brand.textContent = 'Webpuppies';
-          footer.appendChild(brand);
-          footer.appendChild(document.createTextNode(' · AWS'));
-          var nav = document.querySelector('.sidebar-nav');
-          if (nav) { nav.appendChild(footer); }
-          else { document.querySelector('.sidebar').appendChild(footer); }
+          branding.appendChild(brand);
+          branding.appendChild(document.createTextNode(' \u00B7 AWS'));
+          var appName = document.querySelector('.sidebar .app-name-link');
+          if (appName && appName.parentNode) {
+            appName.parentNode.insertBefore(branding, appName.nextSibling);
+          }
         });
 
         hook.afterEach(function (html) {
