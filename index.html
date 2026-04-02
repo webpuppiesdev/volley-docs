@@ -287,13 +287,87 @@
     .powered-by-footer a:hover { color: var(--brand) !important; }
 
     /* ── RESPONSIVE ── */
+
+    /* Tablet */
     @media (max-width: 768px) {
-      .markdown-section { padding: 24px 20px 80px !important; }
-      .markdown-section h1 { font-size: 1.7em; }
-      .markdown-section h2 { font-size: 1.3em; }
-      .doc-cards { grid-template-columns: 1fr; }
-      section.cover h1 { font-size: 3em !important; }
-      section.cover .cover-main > p:first-child img { height: 72px; width: 72px; }
+      .markdown-section { padding: 28px 24px 80px !important; max-width: 100% !important; }
+      .markdown-section h1 { font-size: 1.6em; letter-spacing: -0.02em; }
+      .markdown-section h2 { font-size: 1.25em; margin-top: 2em; }
+      .markdown-section h3 { font-size: 1.05em; }
+      .doc-cards { grid-template-columns: 1fr; gap: 12px; }
+      .doc-card { padding: 18px; }
+
+      /* Cover page */
+      section.cover { padding: 0 24px !important; }
+      section.cover .cover-main { max-width: 100%; }
+      section.cover .cover-main > p:first-child img { height: 64px; width: 64px; margin-bottom: 20px; }
+      section.cover h1 { font-size: 2.8em !important; }
+      section.cover blockquote { font-size: 1em !important; max-width: 100%; }
+      section.cover .cover-main > p:last-child a {
+        padding: 12px 28px; font-size: 14px; margin: 4px;
+      }
+      section.cover .cover-main > p:nth-child(2) { font-size: 11px !important; }
+
+      /* Tables scroll horizontally */
+      .markdown-section table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+      /* Code blocks */
+      .markdown-section pre { padding: 16px 16px !important; border-radius: 10px !important; font-size: 12px !important; }
+      .markdown-section pre code { font-size: 12px !important; }
+
+      /* Mermaid */
+      .mermaid { padding: 16px 12px; }
+
+      /* Powered by footer */
+      .powered-by-footer { padding: 16px; margin-top: 2em; }
+    }
+
+    /* Small phone */
+    @media (max-width: 480px) {
+      .markdown-section { padding: 20px 16px 60px !important; }
+      .markdown-section h1 { font-size: 1.4em; }
+      .markdown-section h2 { font-size: 1.15em; }
+      .markdown-section blockquote { padding: 12px 14px; font-size: 13px; }
+
+      section.cover .cover-main > p:first-child img { height: 56px; width: 56px; }
+      section.cover h1 { font-size: 2.2em !important; }
+      section.cover blockquote { font-size: 0.9em !important; line-height: 1.5 !important; }
+      section.cover .cover-main > p:last-child { display: flex; flex-direction: column; align-items: center; }
+      section.cover .cover-main > p:last-child a {
+        display: block; width: 100%; max-width: 280px;
+        text-align: center; padding: 14px 20px; margin: 5px 0;
+      }
+
+      .doc-card { padding: 16px; }
+      .doc-card .card-title { font-size: 14px; }
+      .doc-card .card-desc { font-size: 12px; }
+
+      .markdown-section pre { padding: 14px 12px !important; }
+      .markdown-section pre code { font-size: 11px !important; line-height: 1.5 !important; }
+    }
+
+    /* Docsify mobile sidebar toggle button */
+    @media (max-width: 768px) {
+      .sidebar-toggle {
+        background: #fff !important;
+        border: 1px solid var(--gray-200) !important;
+        border-radius: 8px !important;
+        padding: 6px !important;
+        left: 12px !important;
+        top: 12px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      .sidebar-toggle span {
+        background-color: var(--gray-600) !important;
+      }
+      body.close .sidebar {
+        transform: translateX(-272px);
+        transition: transform 0.25s ease;
+      }
+      body:not(.close) .sidebar {
+        transition: transform 0.25s ease;
+        box-shadow: 4px 0 24px rgba(0,0,0,0.1);
+      }
     }
   </style>
 </head>
